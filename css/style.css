@@ -83,7 +83,7 @@ h1,h2,h3,h4,h5,h6{font-weight: normal;}
 .shpage .inshare .mation{position: absolute;left:50%;bottom:15%;width: 114px;height: 32px;margin-left: -57px;}
   
 .xzty{position:fixed;left:50%;top:50%;margin-left:-40%;margin-top:-50%;;z-index:99;display:none;;} 
-.xzty .inxzty{position: fixed;left:50%;top:50%;margin-left:-33%;margin-top:-50%;width:67%;}	
+.xzty .inxzty{position: fixed;left:50%;top:50%;margin-left:-33%;margin-top:-30%;width:67%;}	
 </style>
 <script type="text/javascript">
 	
