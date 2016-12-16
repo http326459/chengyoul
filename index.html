@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>城友首页</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		$(function(){
+   			$("#backTop").click(function(){
+   				$(window).scrollTop(0);
+   			});
+   			$("#kaibtn").click(function(){
+   				//console.log($(".giftbox ul").find("li div").html());
+   				$(".giftbox li div").addClass("fins3d");
+   				setTimeout(function(){
+   					$(".giftbox li div img").attr("src","images/beimian.png");
+   				},300);
+   				$(".giftbox li").click(function(){
+	   				$(this).find("div").removeClass("fins3d");
+	   				var anum = $(this).index();
+	   				setTimeout(function(){
+	   					$("li").eq(anum).find("div img").attr("src","images/liangyuan.png");
+	   				},900);
+	   			});
+   			});
+   			$("#elasticaa").click(function(){
+   				Popup6();
+   			});
+   				$("#guizeaa").click(function(){
+   				Popup5();
+   				});
+   			});
+   		//实现滚动条无法滚动
+		var mo=function(e){e.preventDefault();};
+		
+		/***禁止滑动***/
+		function stop(){
+	    document.body.style.overflow='hidden';        
+	    document.addEventListener("touchmove",mo,false);//禁止页面滑动
+		}
+		
+		/***取消滑动限制***/
+		function move(){
+    document.body.style.overflow='auto';//出现滚动条
+    document.removeEventListener("touchmove",mo,false);        
+		}
+		
+		//蒙层
+		function modal_hy(){
+			var modal=document.createElement('div');
+			//location.href ="#top";
+			modal.id="b_modal";
+			modal.className="modal";
+			document.body.appendChild(modal);
+		}
+		function Popup1(){
+			//蒙版层
+			modal_hy();
+			var modal=document.getElementById('b_modal');
+			//非移动用户框架
+			var bof=document.createElement('div');
+			bof.id = "box";
+			bof.className = "user";
+			var html='<div class="inuser"><img src="images/user.png"/>'+
+						'<a href="javascript:;" class="offb" id="offb"><img src="images/offb.png"/></a>'+
+						'<a href="javascript:;" class="sms" id="sms"><img src="images/SMS.png"/></a></div>';
+			bof.innerHTML=html;
+			document.body.appendChild(bof);
+			//选取
+			var box=document.getElementById('box');
+			var close=document.getElementById('offb');
+			var close1=document.getElementById('sms');
+			modal.style.display="block";
+			box.style.display="block";
+			stop();
+			close.onclick=function(){
+				document.body.removeChild(modal);
+				move();
+				document.body.removeChild(bof);		
+			};
+			close1.onclick=function(){
+				document.body.removeChild(modal);
+				move();
+				document.body.removeChild(bof);		
+			};
+		};
+		
+		
+		function Popup2(){
+			//蒙版层
+			modal_hy();
+			var modal=document.getElementById('b_modal');
+			//抽奖无资格框架
+			var bof=document.createElement('div');
+			bof.id = "box";
+			bof.className = "conbounceda";
+			var html='<div class="bounceda"><img src="images/xinchou.png"/>'+
+				'<a href="javascript:;" class="shut" id="shut"><img src="images/OFF.png"/></a>'+
+				'<a href="javascript:;" class="confirm" id="confirm"><img src="images/xinque.png"/></a></div>';
+			bof.innerHTML=html;
+			document.body.appendChild(bof);
+			//选取
+			var box=document.getElementById('box');
+			var close=document.getElementById('shut');
+			var close1=document.getElementById('confirm');
+			modal.style.display="block";
+			box.style.display="block";
+			stop();
+			close.onclick=function(){
+				document.body.removeChild(modal);
+				move();
+				document.body.removeChild(bof);		
+			};
+			close1.onclick=function(){
+				document.body.removeChild(modal);
+				move();
+				document.body.removeChild(bof);		
+			};
+		};
+		
+		function Popup3(){
+			//蒙版层
+			modal_hy();
+			var modal=document.getElementById('b_modal');
+			//尚未登录框架
+			var bof=document.createElement('div');
+			bof.id = "box";
+			bof.className = "login";
+			var html='<div class="inlogin"><img src="images/login.png"/>'+
+					'<a href="javascript:;" class="offd" id="offd"><img src="images/offb.png"/></a>'+
+					'<a href="javascript:;" class="mation" id="mation"><img src="images/dianji_03.png"/></a></div>';
+			bof.innerHTML=html;
+			document.body.appendChild(bof);
+			//选取
+			var box=document.getElementById('box');
+			var close=document.getElementById('offd');
+			var close1=document.getElementById('mation');
+			modal.style.display="block";
+			box.style.display="block";
+			stop();
+			close.onclick=function(){
+				document.body.removeChild(modal);
+				move();
+				document.body.removeChild(bof);		
+			};
+			close1.onclick=function(){
+				document.body.removeChild(modal);
+				move();
+				document.body.removeChild(bof);		
+			};
+		};
+		
+		function Popup4(){
+			//蒙版层
+			modal_hy();
+			var modal=document.getElementById('b_modal');
+			//谢谢参与框架
+			var bof=document.createElement('div');
+			bof.id = "box";
+			bof.className = "participate";
+			var html='<div class="inparticipate"><img src="images/xincanyu.png"/>'+
+				'<a href="javascript:;" class="shut" id="shut"><img src="images/OFF.png"/></a>'+
+				'<a href="javascript:;" class="mation" id="mation"><img src="images/xinque.png"/></a></div>';
+			bof.innerHTML=html;
+			document.body.appendChild(bof);
+			//选取
+			var box=document.getElementById('box');
+			var close=document.getElementById('shut');
+			var close1=document.getElementById('mation');
+			modal.style.display="block";
+			box.style.display="block";
+			stop();
+			close.onclick=function(){
+				document.body.removeChild(modal);
+				move();
+				document.body.removeChild(bof);		
+			};
+			close1.onclick=function(){
+				document.body.removeChild(modal);
+				move();
+				document.body.removeChild(bof);		
+			};
+		};
+		
+			function Popup5(){
+			//蒙版层
+			modal_hy();
+			var modal=document.getElementById('b_modal');
+			//活动规则框架
+			var bof=document.createElement('div');
+			bof.id = "box";
+			bof.className = "rules";
+			var html='<div class="inrules"><img src="images/rules.png" class="rulespic"/>'+
+				'<a href="javascript:;" class="shut" id="shut"><img src="images/offb.png"/></a>'+
+				'<div class="inrulestxt"><h3>一、活动时间：</h3><p>2016.12.21——2016.12.31</p>'+
+				'<h3>二、活动内容</h3><p>重庆城客户端用户，点击首页banner或活动专区专栏，进入活动主页面。</p><p>1.瓜分城主800万奖池</p>'+
+				'<p>重庆城客户端用户均有机会翻牌子赢取1—50元不等话费。抽中话费后，需将活动页面分享至微信等社交媒体，方能确认获奖信息，删除无效。</p>'+
+				'<p>2.邀请好友享福利</p><p>快来邀请好友下载重庆城客户端，参与“城友狂欢节”主题活动吧。新老用户均有机会瓜分城主的800万话费奖池，新用户首次下载、注册重庆城客户端还可额外获赠城主送出的新人大礼包。</p>'+
+				'<h3>三、奖品及发放</h3><p>1-50元随机话费</p><p>话费奖品将于中奖后7个工作日内发放。</p><h3>备注：所有奖品仅限重庆移动用户领取</h3></div><b>*本活动最终解释权归重庆城所有</b></div>';
+			bof.innerHTML=html;
+			document.body.appendChild(bof);
+			//选取
+			var box=document.getElementById('box');
+			var close=document.getElementById('shut');
+			modal.style.display="block";
+			box.style.display="block";
+			//stop();
+			close.onclick=function(){
+				document.body.removeChild(modal);
+				//move();
+				document.body.removeChild(bof);		
+			};
+		};
+		
+			function Popup6(){
+			//蒙版层
+			modal_hy();
+			var modal=document.getElementById('b_modal');
+			//已经收入框架
+			var bof=document.createElement('div');
+			bof.id = "box";
+			bof.className ="shpage";
+			var html='<div class="inshare"><img src="images/yiru.png"/>'+
+				'<span>赢得<i>X</i>元话费狂欢奖</span><a href="javascript:;" class="shut" id="shut"><img src="images/OFF.png"/></a>'+
+				'<a href="javascript:;" class="mation" id="mation"><img src="images/sha.png"/></a></div>';
+			bof.innerHTML=html;
+			document.body.appendChild(bof);
+			//选取
+			var box=document.getElementById('box');
+			var close=document.getElementById('shut');
+			var close1=document.getElementById('mation');
+			modal.style.display="block";
+			box.style.display="block";
+			stop();
+			close.onclick=function(){
+				document.body.removeChild(modal);
+				move();
+				document.body.removeChild(bof);		
+			};
+			close1.onclick=function(){
+				document.body.removeChild(modal);
+				move();
+				document.body.removeChild(bof);		
+			};
+		};
+    </script>
+</head>
+<body>
+	<div class="container" id="index">
+		<div class="header"><img src="images/topy1.jpg"><a href="indextwo.html" class="share">分享</a></div>
+		<div class="header-bot"><img src="images/kuanghuan.jpg"></div>
+		<div class="banner"><img src="images/ban1.jpg">
+			<ul class="giftbox clearfixa">
+				<li><div><img src="images/yiyuan.png" /></div></li>
+				<li><div><img src="images/liangyuan.png" /></div></li>
+				<li><div><img src="images/wuyuan.png" /></div></li>
+				<li><div><img src="images/shiyuan.png" /></div></li>
+				<li><div><img src="images/shiyuan.png" /></div></li>
+				<li><div><img src="images/wushi.png" /></div></li>
+			</ul>
+			<a href="javascript:;" id="kaibtn"><img src="images/Mozilla.png"></a>
+		</div>
+		<div class="bot">
+			<div class="bot1"><img src="images/bot1_01.jpg"><a href="javascript:;" id="elasticaa" ><img src="images/yaoqing.png"></a></div>
+			<div class="bot2"><img src="images/bot1_02.jpg"><a href="javascript:;" id="backTop"></a></div>
+		</div>
+		<a href="javascript:;"  class="guizhe" id="guizeaa"><img src="images/zilla.png"></a>
+	</div>
+</body>	
+</html>

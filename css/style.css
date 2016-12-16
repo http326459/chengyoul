@@ -1,0 +1,93 @@
+/*ss重置样式  */
+body,div,i,a,p,span,b,input,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dd,dt,textarea,img{margin:0;padding:0;}
+*{margin:0;padding:0;}
+body{font-family:sans-serif;color:#333;}
+html{-webkit-text-size-adjust: 100%;}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display: block;}
+i,b{font-style: normal;}
+a{text-decoration:none;}
+a:active,a:hover{outline:0;}
+img{vertical-align:top;width: 100%;}
+input,textarea,select,textarea,img{resize:none;outline: none;border: none;}
+button,input,optgroup,select,textarea{font: inherit; margin: 0;color: inherit;}
+button{overflow: visible;}
+button,select{text-transform: none;}
+button,html input[type='button'],input[type='reset'],input[type='submit']{cursor: pointer; -webkit-appearance: button;}
+button[disabled],html input[disabled]{cursor: default;}
+li{list-style: none}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+.clearfixa:after{content: '';display: block;height:0;clear: both;font-size:0;*zoom:1;}
+.clearfixb:before{content: '';display: block;height:0;clear: both;font-size:0;*zoom:1;}
+.fl{float:left;}
+.fr{float:right;}
+/*ss重置样式  */
+
+/* index */
+#index,#indextwo,.banner,.header{position:relative;}
+.header .share{position:absolute;right:1.5%;top:9%;color:#333;font-size:13px;height:28px;font-weight:bold;}
+.banner .giftbox{position:absolute;left:0;top:0;perspective:1200px;}
+.banner .giftbox li{float:left;width:33.33%;margin-bottom:10px;transform-style:preserve-3d;}
+.banner .giftbox li div{transition:2s all;}
+.banner #kaibtn{position:absolute;left:50%;bottom:0;width:50%;margin-left:-25%;}
+#index .bot .bot1,.bot2{position:relative;}
+#index .bot .bot1 a{position:absolute;left:50%;bottom:14%;width:30%;margin-left:-15%;}
+#index .bot .bot2 a{position:absolute;left:50%;top:0;display:block;width:15%;height:45%;margin-left:-7.5%;}
+.guizhe{position:fixed;right:3%;bottom:5%;width:15%;}
+.fins3d{transform:rotatey(360deg);}
+
+/* indextwo */
+#indextwo .bot1{position:relative;}
+#indextwo .bot1 a{position:absolute;right:10%;bottom:15%;width:25%;}
+#indextwo #kaibtn{bottom:4%;}
+
+/*load*/
+#load .main{position: relative;}
+#load .main .top{position:absolute;left:50%;bottom: 17%;width: 200px;height: 36px;margin-left:-100px;}
+#load .main .bot{position:absolute;left:50%;bottom: 7%;width: 200px;height: 36px;margin-left:-100px;}	
+
+/*tankuang*/
+.user{position:fixed;left:50%;top:50%;margin-left:-40%;margin-top:-50%;width:80%;z-index:99;display:none;}
+.user .inuser{position: relative;}
+.user .inuser .offb{position: absolute;right:9%;top:10%;width: 24px;height: 24px;}
+.user .inuser .sms{position: absolute;left:50%;bottom: 18%;width: 110px;height: 32px;margin-left: -55px;}
+.modal{background:rgba(42,38,38,0.5);position:fixed;top:0;left:0;z-index:10;width:100%;height:100%;display:none;}
+
+.conbounceda{position:fixed;left:50%;top:50%;margin-left:-40%;margin-top:-50%;width:80%;z-index:99;display:none;}
+.conbounceda .bounceda{position: relative;}
+.conbounceda .bounceda .shut{position: absolute;right:4%;top:5%;width: 24px;height: 24px;}
+.conbounceda .bounceda .confirm{position: absolute;left:50%;bottom:22%;width: 114px;height: 32px;margin-left: -54px;}
+
+.rules{position:fixed;left:50%;top:50%;margin-left:-40%;margin-top:-225px;width:80%;z-index:99;display:none;}
+.rules .inrules{position: relative;}
+.rules .inrules .rulespic{height:450px;}
+.rules .inrules .shut{position: absolute;right:4%;top:7%;width:24px;height:24px;z-index:99;}
+.rules .inrules .inrulestxt{position: absolute;left:4%;top:10%;width:93%;font-family: "微软雅黑";height:380px;overflow-y:auto;}
+.rules .inrules .inrulestxt h3{color:#751405;height:28px;line-height:28px;font-size:14px;}
+.rules .inrules .inrulestxt p{color:#444444;line-height: 23px;font-size: 13px;}
+.rules .inrules  b{color:#161616;font-size:12px;position:absolute;left:0;bottom:10px;width:90%;text-align:center;}
+
+.login{position:fixed;left:50%;top:50%;margin-left:-40%;margin-top:-50%;width:80%;z-index:99;display:none;}
+.login .inlogin{position: relative;}
+.login .inlogin .offd{position: absolute;right:9%;top:10%;width: 24px;height: 24px;}
+.login .inlogin .mation{position: absolute;left:50%;bottom: 18%;width: 110px;height: 32px;margin-left: -55px;}
+
+.participate{position:fixed;left:50%;top:50%;margin-left:-40%;margin-top:-50%;width:80%;z-index:99;display:none;}
+.participate .inparticipate{position: relative;}
+.participate .inparticipate .shut{position: absolute;right:4%;top:6%;width: 24px;height: 24px;}
+.participate .inparticipate .mation{position: absolute;left:50%;bottom:19%;width: 114px;height: 32px;margin-left: -57px;}
+ 
+.shpage{position:fixed;left:50%;top:50%;margin-left:-40%;margin-top:-50%;width:80%;z-index:99;display:none;} 
+.shpage .inshare{position: relative;}
+.shpage .inshare span{color:#ffef00;font-size: 16px;position: absolute;right:26%;top:38%;font-weight: bold;display: block;}
+.shpage .inshare .shut{position: absolute;right:4%;top:14%;width: 24px;height: 24px;}
+.shpage .inshare .mation{position: absolute;left:50%;bottom:15%;width: 114px;height: 32px;margin-left: -57px;}
+  
+.xzty{position:fixed;left:50%;top:50%;margin-left:-40%;margin-top:-50%;;z-index:99;display:none;;} 
+.xzty .inxzty{position: fixed;left:50%;top:50%;margin-left:-34%;margin-top:-22%;width:67%;}	
+</style>
+<script type="text/javascript">
+	
+	document.addEventListener('plusready', function(){
+		//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+		
+	});
